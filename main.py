@@ -19,6 +19,17 @@ def encoder(password):
     return en_coder_str
 
 
+def decoder(password):
+    result = ''
+    for i in password:
+        temp = int(i) - 3
+        if temp >= 0:
+            result += str(temp)
+        else:
+            result += str(int(i) + 10 - 3) # if int minus 3 is negative we should plus 10
+    print(f"The encoded password is {password}, and the original password is {result}.")
+
+
 password_continue = True
 if __name__ == '__main__':
 
@@ -31,8 +42,8 @@ if __name__ == '__main__':
             pass_word = input('Please enter your password to encode:')
             encoded = encoder(pass_word)
             print("Your password has been encoded and stored!")
-            
-        # elif op == 2:
 
+        elif op == 2:
+            decoder(encoded)
         elif op == 3:
             password_continue = False
