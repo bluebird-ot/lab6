@@ -1,3 +1,4 @@
+# Brianna Yanqui
 def menu():
     print('Menu')
     print('-------------')
@@ -19,7 +20,7 @@ def encoder(password):
 
     return en_coder_str
 
-
+# Minh C Nguyen
 def decoder(password):
     result = ''
     for i in password:
@@ -43,7 +44,7 @@ if __name__ == '__main__':
             pass_word = input('Please enter your password to encode:')
             encoded = encoder(pass_word)
             print("Your password has been encoded and stored!")
-
+        # Minh C Nguyen
         elif op == 2:
             decoder(encoded)
         elif op == 3:
