@@ -13,6 +13,7 @@ def encoder(password):
     password = [int(num) for num in password]
     K = 3
     en_coder = [num + K for num in password]
+    en_coder = [num - 10 if num >= 10 else num for num in en_coder]
     en_coder_s = [str(num) for num in en_coder]
     en_coder_str = ''.join(en_coder_s)
 
